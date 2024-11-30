@@ -1,0 +1,14 @@
+{
+    "HomePage": {
+      "title": "Hello world!",
+      "checkout": "Go to the checkout page"
+    },    
+    "Checkout": {
+      "title": "Shipping Info",
+      "city": "city",
+      "country": "country",
+      "btnSubmit": "Save Shipping Info",
+      "placeholder-city": "enter the city",
+      "select-country": "Select a country"
+    }
+  }

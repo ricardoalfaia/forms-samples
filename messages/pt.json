@@ -1,0 +1,14 @@
+{
+    "HomePage": {
+      "title": "Olá!",
+      "checkout": "cliue para acessar o checkout"
+    },
+    "Checkout": {
+      "title": "Dados para entrega",
+      "city": "cidade",
+      "country": "pais",
+      "btnSubmit": "Salve os dados de entrega",
+      "placeholder-city": "digite a cidade",
+      "select-country": "selecione o pais"
+    }
+  }

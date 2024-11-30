@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import React, { useState, useEffect, useRef } from "react";
 
 interface Address {
@@ -27,6 +28,7 @@ export function CheckoutForm() {
   const inputRef = useRef<HTMLInputElement>(null);
   const errors = getErrors(address);
   const isValid = Object.keys(errors).length === 0;
+  const t = useTranslations("Checkout");
 
   useEffect(() => {
     if (status === STATUS.COMPLETED) {
@@ -86,7 +88,7 @@ export function CheckoutForm() {
 
   return (
     <>
-      <h1 className="text-center text-3xl mt-8">Shipping Info</h1>
+      <h1 className="text-center text-3xl mt-8">{t("title")}</h1>
 
       {saveError && (
         <div>
@@ -112,7 +114,7 @@ export function CheckoutForm() {
               className="text-black font-bold text-lg text-left"
               htmlFor="city"
             >
-              City
+              {t("city")}
             </label>
             <br />
             <input
@@ -124,7 +126,7 @@ export function CheckoutForm() {
               value={address.city}
               onBlur={handleBlur}
               onChange={handleChange}
-              placeholder="enter the city"
+              placeholder={t("placeholder-city")}
             />
             <p className="text-red-600">
               {(touched.city || status === STATUS.SUBMITTED) && errors.city}
@@ -132,7 +134,7 @@ export function CheckoutForm() {
           </div>
           <div className="flex flex-col mt-2">
             <label className="text-lg font-bold mb-2" htmlFor="country">
-              Country
+              {t("country")}
             </label>
             <select
               className="border-2 border-gray-400 border-solid h-10 w-[450px] mb-2 p-2"
@@ -142,7 +144,7 @@ export function CheckoutForm() {
               onBlur={handleBlur}
               onChange={handleChange}
             >
-              <option value="">Select country</option>
+              <option value="">{t("select-country")}</option>
               <option value="Brasil">Brasil</option>
               <option value="China">China</option>
               <option value="Espanha">Espanha</option>
@@ -157,7 +159,7 @@ export function CheckoutForm() {
             <input
               className="bg-lime-700 text-white p-3 mt-4 rounded-lg font-bold cursor-pointer"
               type="submit"
-              value="Save Shipping Info"
+              value={t("btnSubmit")}
               // disabled={!isValid}
             />
           </div>
@@ -165,10 +167,10 @@ export function CheckoutForm() {
       </form>
       <div className="flex justify-center gap-2 mt-4">
         <p>
-          cidade: <span className="font-bold">{address.city}</span>
+          {t("city")}: <span className="font-bold">{address.city}</span>
         </p>
         <p>
-          country: <span className="font-bold">{address.country}</span>
+          {t("country")}: <span className="font-bold">{address.country}</span>
         </p>
       </div>
     </>
