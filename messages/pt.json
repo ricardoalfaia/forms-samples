@@ -1,7 +1,7 @@
 {
     "HomePage": {
-      "title": "Olá!",
-      "checkout": "cliue para acessar o checkout"
+      "title": "Olá visitante!",
+      "checkout": "clique para acessar o checkout"
     },
     "Checkout": {
       "title": "Dados para entrega",
@@ -9,6 +9,13 @@
       "country": "pais",
       "btnSubmit": "Salve os dados de entrega",
       "placeholder-city": "digite a cidade",
-      "select-country": "selecione o pais"
+      "select-country": "selecione o pais",
+      "error-disclaimer": "",
+      "error-city": "* Cidade é obrigatório",      
+      "error": {
+        "disclaimer": "Por favor, corriga os erros a seguir:",
+        "city": "* Cidade é obrigatório",
+        "country": "* Pais é obrigatório"
+      }
     }
   }

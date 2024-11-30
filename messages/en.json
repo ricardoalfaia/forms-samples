@@ -9,6 +9,11 @@
       "country": "country",
       "btnSubmit": "Save Shipping Info",
       "placeholder-city": "enter the city",
-      "select-country": "Select a country"
+      "select-country": "Select a country",
+      "error": {
+        "disclaimer": "Please fix the following errors:",
+        "city": "* City is required",
+        "country": "* Country is required"
+      }
     }
   }
